@@ -118,6 +118,7 @@ export interface SortOptions {
   stopClickEventPropagation?: boolean
 }
 
+/** @deprecated 所有的 transform 都已经过时，请使用最新的 pipeline 来对表格进行拓展 */
 export function makeSortTransform({
   sorts: inputSorts,
   onChangeSorts: inputOnChangeSorts,
@@ -277,6 +278,7 @@ export function makeSortTransform({
   }
 }
 
+/** @deprecated 所有的 transform 都已经过时，请使用最新的 pipeline 来对表格进行拓展 */
 export function useSortTransform({
   defaultSorts = [],
   ...others

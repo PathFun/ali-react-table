@@ -22,6 +22,8 @@ function isSameArray(arr1: number[], arr2: number[]) {
 
 /** 自适应列宽
  *
+ * @deprecated 所有的 transform 都已经过时，请使用最新的 pipeline 来对表格进行拓展
+ *
  * @param tableRef BaseTable 的 ref
  * @param options 参数
  * @param deps 重新调整列宽的依赖数组，每当依赖数组发生变化时， useAutoWidthTransform 会根据单元格内容的实际渲染宽度 设置单元格的宽度

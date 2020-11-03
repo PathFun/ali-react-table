@@ -5,10 +5,12 @@ import { ArtColumn, TableTransform } from '../interfaces'
 import { internals } from '../internals'
 import { isLeafNode as standardIsLeafNode, mergeCellProps } from '../utils'
 
+/** @deprecated 所有的 transform 都已经过时，请使用最新的 pipeline 来对表格进行拓展 */
 export const treeMetaSymbol = Symbol('treeMetaSymbol')
 
 const ICON_WIDTH = 16
 
+/** @deprecated 所有的 transform 都已经过时，请使用最新的 pipeline 来对表格进行拓展 */
 export interface TreeModeOptions {
   primaryKey: string
   openKeys: string[]
@@ -27,6 +29,9 @@ export interface TreeModeOptions {
   stopClickEventPropagation?: boolean
 }
 
+let deprecatedWarned = false
+
+/** @deprecated 所有的 transform 都已经过时，请使用最新的 pipeline 来对表格进行拓展 */
 export function makeTreeModeTransform({
   onChangeOpenKeys,
   openKeys,
@@ -39,6 +44,11 @@ export function makeTreeModeTransform({
   treeMetaKey = treeMetaSymbol,
   stopClickEventPropagation,
 }: TreeModeOptions): TableTransform {
+  if (!deprecatedWarned) {
+    deprecatedWarned = true
+    console.warn('[ali-react-table] 所有的 transform 都已经过时，请使用最新的 pipeline 来对表格进行拓展')
+  }
+
   const openKeySet = new Set(openKeys)
 
   const toggle = (rowKey: string) => {
@@ -179,6 +189,7 @@ export function makeTreeModeTransform({
   }
 }
 
+/** @deprecated 所有的 transform 都已经过时，请使用最新的 pipeline 来对表格进行拓展 */
 export function useTreeModeTransform({
   defaultOpenKeys = [],
   ...others

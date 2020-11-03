@@ -22,6 +22,7 @@ const ResizeHandle = styled.span`
   z-index: 1;
 `
 
+/** @deprecated 所有的 transform 都已经过时，请使用最新的 pipeline 来对表格进行拓展 */
 export interface ColumnResizeOptions {
   /** 每一列的宽度 */
   sizes: number[]
@@ -41,6 +42,7 @@ export interface ColumnResizeOptions {
   expanderVisibility?: 'visible' | 'hidden'
 }
 
+/** @deprecated 所有的 transform 都已经过时，请使用最新的 pipeline 来对表格进行拓展 */
 export function makeColumnResizeTransform({
   sizes,
   onChangeSizes,
@@ -141,6 +143,7 @@ export function makeColumnResizeTransform({
   }
 }
 
+/** @deprecated 所有的 transform 都已经过时，请使用最新的 pipeline 来对表格进行拓展 */
 export function useColumnResizeTransform({
   defaultSizes,
   ...others

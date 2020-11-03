@@ -12,6 +12,7 @@ export type HoverRange = {
   end: number
 }
 
+/** @deprecated 所有的 transform 都已经过时，请使用最新的 pipeline 来对表格进行拓展 */
 export interface ColumnRangeHoverOptions {
   hoverColor?: string
   headerHoverColor?: string
@@ -19,6 +20,7 @@ export interface ColumnRangeHoverOptions {
   onChangeHoverRange(nextColIndexRange: HoverRange): void
 }
 
+/** @deprecated 所有的 transform 都已经过时，请使用最新的 pipeline 来对表格进行拓展 */
 export function makeColumnRangeHoverTransform({
   hoverColor = 'var(--hover-bgcolor)',
   headerHoverColor = 'var(--header-hover-bgcolor)',
@@ -78,6 +80,7 @@ export function makeColumnRangeHoverTransform({
   })
 }
 
+/** @deprecated 所有的 transform 都已经过时，请使用最新的 pipeline 来对表格进行拓展 */
 export function useColumnHoverRangeTransform({
   hoverColor,
   headerHoverColor,
